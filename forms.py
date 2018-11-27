@@ -27,7 +27,7 @@ class IncidentForm(FlaskForm):
     category = SelectField('Category', choices=[('cpp', 'Filler'), ('py', 'choices'), ('text', 'database will fill')])
     description = TextAreaField('Description', validators =[DataRequired(), Length(min =2,max=200)])
     date_created = DateField('Date Created', format = "%m/%d/%Y", validators=[DataRequired()])
-    date_resolved = DateField('Date Created', format = "%m/%d/%Y", validators=[DataRequired()])
+    date_resolved = DateField('Date Created', format = "%m/%d/%Y")
     state = StringField('State', validators = [DataRequired(), Length(min = 2, max = 20)])
     point_contact = StringField('Username',
         validators=[DataRequired(), Length(min=2, max=20)])
